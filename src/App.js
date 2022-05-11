@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='first'>  
+      <div className='first' >  
       <div className='left'>
       <button className='header'>Start Bootstrap</button>
       <button className='btn1'>Home</button>
@@ -78,7 +78,7 @@ function App() {
       </div> : ""}
       </div>
       </div>
-      <div className='right'>
+      <div className='right' onClick={() => setShow2(false)}>
         <Cart/>
         </div>
       </div>
@@ -104,12 +104,12 @@ function App() {
 
       <button className='cart1 btn3'><i class="fa fa-shopping-cart"></i> Cart 0</button>
       </div> : ""} 
-      <div className='second'>
+      <div className='second' onClick={() => setShow2(false)} >
         <h1 className='p1'>Shop in Style</h1>
         <p className='p2'>with this shop homepage template</p>
       </div>
 
-      <div className='third'>
+      <div className='third'onClick={() => setShow2(false)}>
         
         {items.map(i => <Item img={i.img} dis={i.dis} name={i.name} rating={i.rating} sale={i.sale} price={i.price} btn={i.btn} />)}
 
