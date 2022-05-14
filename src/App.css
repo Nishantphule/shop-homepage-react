@@ -173,6 +173,7 @@ padding: 10px;
   flex-direction:column;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: lightgrey;
 }
 
 .opt1{
@@ -197,8 +198,8 @@ padding: 10px;
 .btn3{
   padding: 10px 10px;
   margin: 10px 10px;
-  background-color: white;
   font-size: 18px;
+  background-color: lightgrey;
 }
 
 .first-low i{
@@ -244,15 +245,78 @@ padding: 10px;
 
 } 
 
+.cartinfo{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.count{
+  padding: 5px;
+  background-color: black;
+  color: white;
+  margin: 5px;
+  border-radius: 20%;
+}
+
+.about{
+  font-size: 40px;
+  text-align: center;
+}
+
+.homepage{
+  text-align: center;
+  font-size: 50px;
+}
+
+.btnstart{
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: black;
+  text-decoration: none;
+  padding: 5px 5px;
+  position: relative;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+
+.btnstart::after{
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: rgb(15, 94, 197);
+  left: 50%;
+  bottom: -10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnstart:hover{
+  cursor: pointer;
+  background-color: green;
+  font-size: 45px;
+}
+
+.btnstart:hover::after{
+  cursor: pointer;
+  width: 100%;
+  left: 0;
+}
+
+
 footer{
-  height: 100px;
+  height:40px;
   width: 100%;
   background-color: black;
   color: whitesmoke;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 30px;
   font-size: 20px;
-  margin-top: 20px;
-
+  margin-top: 400px;
+  position: sticky;
+  bottom: 0;
 }
 
