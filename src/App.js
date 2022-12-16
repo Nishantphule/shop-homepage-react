@@ -1,6 +1,6 @@
-
 import './App.css';
 import { useState } from 'react';
+
 
 const items = [
   {
@@ -53,16 +53,17 @@ const items = [
   }
 ]
 
+
 const PAGE_Products = 'products';
 const PAGE_Cart = 'cart';
 const PAGE_Home = 'home'
 const PAGE_About = 'about'
 
+
 function App() {
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
-  const [btn, setBtn] = useState("add")
   const [cart, setCart] = useState([])
   const [page, setPage] = useState(PAGE_Home)
   const [products] = useState(items)
@@ -80,6 +81,7 @@ function App() {
     setPage(page)
   }
 
+  
   const renderHome = () => (
     <div>
       <div className='homepage' onClick={() => setShow2(false)}>
@@ -95,13 +97,13 @@ function App() {
     </div>
   )
 
+  
   const renderAbout = () => (
     <h2 className='about'>It is a shopping Homepage Project</h2>
   ) 
   
   
   const renderProducts = () => (
-    
     <>
       <div className='third' onClick={() => setShow2(false)}>
 
@@ -115,27 +117,31 @@ function App() {
               <p>{i.price}</p>
             </div>
             <button 
-            onClick={() => (btn === "add") ? 
-            ( addToCart(i), setBtn("remove") ) : (removeFromCart(i),setBtn("add"))} 
+            onClick={() => addToCart(i)} 
             className='btn2'>  
-            {console.log(btn)}
-            {btn === "add" ? "Add to cart" : "Remove From Cart"}
+            {i.btn}
             </button>
           </div>
         ))}
       </div></>
   )
 
+  
   const renderCart = () => (
     <div>
-      
       {cart.length === 0 ?
-        <div className='render-cart'>
+        <div className='render-cart-empty'>
           <h3>Your cart is empty</h3>
           <button className='btnstart' onClick={() => navigateTo(PAGE_Products)}>Click to Add Products</button>
+          
         </div> :
         <div className='render-cart'>
-          <h3>Your cart has {cart.length} items</h3>
+          <button onClick={() => navigateTo(PAGE_Products)}>
+            Continue Shopping
+          </button>
+          <button onClick={() => setCart([])}>
+            Clear Cart
+          </button>
         </div>}
         
       <div className='third' onClick={() => setShow2(false)}>

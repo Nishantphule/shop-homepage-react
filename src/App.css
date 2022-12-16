@@ -19,11 +19,30 @@ button{
   padding: 10px;
 }
 
-.render-cart{
+.render-cart-empty{
+  padding: 1%;
+  margin: 1% 0;
+  font-size: 34px;
   text-align: center;
-  padding: 2%;
-  margin: 2% 0;
-  font-size: 24px
+}
+
+.render-cart{
+  padding: 1%;
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.render-cart button{
+  font-size: 25px;
+  color: red;
+  padding: 5px;
+}
+
+.render-cart button:hover{
+  background-color: gray;
+  cursor: pointer;
 }
 
 .btn1:hover{
@@ -71,6 +90,7 @@ hr{
   padding-right: 30px;
 }
 
+
 .first{
 display: flex;
 align-items: center;
@@ -80,7 +100,6 @@ background-color: lightgray;
 position: sticky;
 top: 0%;
 }
-
 
 
 .second {
@@ -104,6 +123,7 @@ top: 0%;
   color: gray;
   opacity: 10;
 }
+
 
 .third{
   display: flex;
