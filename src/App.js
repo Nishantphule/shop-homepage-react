@@ -216,7 +216,7 @@ function App() {
         {page === PAGE_Products && renderProducts()}
         {page === PAGE_Cart && renderCart()}
 
-        <footer>Copyright © Nishant Phule 2022</footer>
+        <footer>Copyright © Nishant Phule 2023</footer>
       </div>
     </div>
   );
